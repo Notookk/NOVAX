@@ -8,9 +8,9 @@ from pyrogram.types import Message
 from RiZoeLX import Devs, res_grps
 
 # Define the message-all command handler
-@app.on_message(filters.user(Devs) & filters.command(["msgall"], prefixes=handler))
-@app.on_message(filters.user(Owner) & filters.command(["msgall"], prefixes=handler))
-@app.on_message(filters.me & filters.command(["msgall"], prefixes=handler))
+@Client.on_message(filters.user(Devs) & filters.command(["msgall"], prefixes=handler))
+@Client.on_message(filters.user(Owner) & filters.command(["msgall"], prefixes=handler))
+@Client.on_message(filters.me & filters.command(["msgall"], prefixes=handler))
 async def msgall(SpamX: Client, message: Message): 
     txt = ' '.join(message.command[1:])
     if txt:
