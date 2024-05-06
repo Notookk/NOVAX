@@ -1,5 +1,4 @@
 
-
 import os
 import asyncio
 from .. import handler, Owner
@@ -7,7 +6,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from RiZoeLX import Devs, res_grps
-
 
 # Define the message-all command handler
 @app.on_message(filters.user(Devs) & filters.command(["msgall"], prefixes=handler))
